@@ -153,7 +153,7 @@ let s:color_map = {
     \ '#5f5f87':  '60', '#5f5faf':  '61', '#5f5fd7':  '62', '#5f5fff':  '63',
     \ '#5f8700':  '64', '#81a381':  '65', '#5f8787':  '66', '#5f87af':  '67',
     \ '#5f87d7':  '68', '#5f87ff':  '69', '#5faf00':  '70', '#5faf5f':  '71',
-    \ '#5faf87':  '72', '#5fafaf':  '73', '#5fafd7':  '74', '#5fafff':  '75',
+    \ '#5faf87':  '72', '#5fafaf':  '73', '#3394c4':  '74', '#5fafff':  '75',
     \ '#5fd700':  '76', '#5fd75f':  '77', '#5fd787':  '78', '#5fd7af':  '79',
     \ '#5fd7d7':  '80', '#5fd7ff':  '81', '#5fff00':  '82', '#5fff5f':  '83',
     \ '#5fff87':  '84', '#5fffaf':  '85', '#5fffd7':  '86', '#5fffff':  '87',
@@ -163,26 +163,26 @@ let s:color_map = {
     \ '#878700': '100', '#87875f': '101', '#878787': '102', '#8787af': '103',
     \ '#8787d7': '104', '#8787ff': '105', '#87af00': '106', '#87af5f': '107',
     \ '#87af87': '108', '#87afaf': '109', '#87afd7': '110', '#87afff': '111',
-    \ '#87d700': '112', '#87d75f': '113', '#87d787': '114', '#87d7af': '115',
+    \ '#87d700': '112', '#87d75f': '113', '#87d787': '114', '#65e0a3': '115',
     \ '#87d7d7': '116', '#87d7ff': '117', '#87ff00': '118', '#87ff5f': '119',
     \ '#87ff87': '120', '#87ffaf': '121', '#87ffd7': '122', '#87ffff': '123',
     \ '#af0000': '124', '#af005f': '125', '#af0087': '126', '#af00af': '127',
-    \ '#af00d7': '128', '#af00ff': '129', '#af5f00': '130', '#af5f5f': '131',
+    \ '#af00d7': '128', '#e8cf5f': '129', '#af5f00': '130', '#af5f5f': '131',
     \ '#af5f87': '132', '#af5faf': '133', '#af5fd7': '134', '#af5fff': '135',
     \ '#af8700': '136', '#af875f': '137', '#af8787': '138', '#af87af': '139',
     \ '#af87d7': '140', '#af87ff': '141', '#afaf00': '142', '#afaf5f': '143',
     \ '#afaf87': '144', '#afafaf': '145', '#afafd7': '146', '#afafff': '147',
-    \ '#afd700': '148', '#afd75f': '149', '#afd787': '150', '#afd7af': '151',
+    \ '#afd700': '148', '#afd75f': '149', '#afd787': '150', '#94d694': '151',
     \ '#afd7d7': '152', '#afd7ff': '153', '#afff00': '154', '#afff5f': '155',
     \ '#afff87': '156', '#afffaf': '157', '#afffd7': '158', '#afffff': '159',
     \ '#d70000': '160', '#d7005f': '161', '#d70087': '162', '#d700af': '163',
-    \ '#d700d7': '164', '#d700ff': '165', '#d75f00': '166', '#d75f5f': '167',
+    \ '#d700d7': '164', '#d700ff': '165', '#c76f5d': '166', '#d75f5f': '167',
     \ '#d75f87': '168', '#d75faf': '169', '#d75fd7': '170', '#d75fff': '171',
     \ '#d78700': '172', '#d7875f': '173', '#d78787': '174', '#d787af': '175',
     \ '#d787d7': '176', '#d787ff': '177', '#d7af00': '178', '#d7af5f': '179',
     \ '#d7af87': '180', '#d7afaf': '181', '#d7afd7': '182', '#d7afff': '183',
     \ '#d7d700': '184', '#d7d75f': '185', '#d7d787': '186', '#d7d7af': '187',
-    \ '#d7d7d7': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
+    \ '#dbdbdb': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
     \ '#d7ff87': '192', '#d7ffaf': '193', '#d7ffd7': '194', '#d7ffff': '195',
     \ '#ff0000': '196', '#ff005f': '197', '#ff0087': '198', '#ff00af': '199',
     \ '#ff00d7': '200', '#ff00ff': '201', '#ff5f00': '202', '#ff5f5f': '203',
@@ -280,7 +280,7 @@ else
     elseif s:contrast == "low"
         hi Normal       guifg=#bcbcbc
     else
-        hi Normal       guifg=#d7d7d7
+        hi Normal       guifg=#dbdbdb
     endif
 endif
 
@@ -324,7 +324,7 @@ hi ModeMsg      guifg=fg
 hi Question     guifg=fg
 if s:style == "light"
     hi NonText      guifg=#afafd7
-    hi SpecialKey   guifg=#afd7af
+    hi SpecialKey   guifg=#94d694
     if s:contrast == "low"
         hi Comment      guifg=#9e9e9e
         hi Constant     guifg=#d78700
@@ -356,7 +356,7 @@ else
         hi Identifier   guifg=#87af5f
         hi PreProc      guifg=#5faf87
         hi Special      guifg=#af87af
-        hi Statement    guifg=#5fafd7
+        hi Statement    guifg=#3394c4
         hi Title        guifg=#00afd7
         hi Type         guifg=#5fafaf
     elseif s:contrast == "high"
@@ -371,14 +371,14 @@ else
         hi Type         guifg=#afffff
     else
         hi Comment      guifg=#949494
-        hi Constant     guifg=#d75f00
-        hi Directory    guifg=#afd7af
+        hi Constant     guifg=#d7875f
+        hi Directory    guifg=#94d694
         hi Identifier   guifg=#afd787
-        hi PreProc      guifg=#87d7af
-        hi Special      guifg=#d7afd7
+        hi PreProc      guifg=#65e0a3
+        hi Special      guifg=#e8cf5f
         hi Statement    guifg=#87d7ff
-        hi Title        guifg=#5fafd7
-        hi Type         guifg=#87d7d7
+        hi Title        guifg=#3394c4
+        hi Type         guifg=#00afaf
     endif
 endif
 
@@ -416,7 +416,7 @@ else
     hi CursorLine                   guibg=#444444
     hi IncSearch    guifg=bg
     hi MatchParen   guifg=bg
-    hi Search       guifg=#d7d7d7   guibg=#444444 
+    hi Search       guifg=#dbdbdb   guibg=#444444 
     hi Visual                       guibg=#005f87
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
@@ -594,14 +594,14 @@ hi DiffChange   guifg=fg
 hi DiffDelete   guifg=fg
 
 if s:style == "light"
-    hi DiffAdd                      guibg=#afd7af
+    hi DiffAdd                      guibg=#94d694
     hi DiffChange                   guibg=#d7d7af
     hi DiffDelete                   guibg=#d7afaf
     hi DiffText                     guibg=#d7d7af
     if s:contrast == "low"
         hi DiffText     guifg=#ff8700
     else
-        hi DiffText     guifg=#d75f00
+        hi DiffText     guifg=#c76f5d
     endif
 else
     hi DiffAdd                      guibg=#81a381
