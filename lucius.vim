@@ -151,14 +151,14 @@ let s:color_map = {
     \ '#5f0000':  '52', '#5f005f':  '53', '#5f0087':  '54', '#5f00af':  '55',
     \ '#5f00d7':  '56', '#5f00ff':  '57', '#5f5f00':  '58', '#5f5f5f':  '59',
     \ '#5f5f87':  '60', '#5f5faf':  '61', '#5f5fd7':  '62', '#5f5fff':  '63',
-    \ '#5f8700':  '64', '#5f875f':  '65', '#5f8787':  '66', '#5f87af':  '67',
+    \ '#5f8700':  '64', '#81a381':  '65', '#5f8787':  '66', '#5f87af':  '67',
     \ '#5f87d7':  '68', '#5f87ff':  '69', '#5faf00':  '70', '#5faf5f':  '71',
     \ '#5faf87':  '72', '#5fafaf':  '73', '#5fafd7':  '74', '#5fafff':  '75',
     \ '#5fd700':  '76', '#5fd75f':  '77', '#5fd787':  '78', '#5fd7af':  '79',
     \ '#5fd7d7':  '80', '#5fd7ff':  '81', '#5fff00':  '82', '#5fff5f':  '83',
     \ '#5fff87':  '84', '#5fffaf':  '85', '#5fffd7':  '86', '#5fffff':  '87',
     \ '#870000':  '88', '#87005f':  '89', '#870087':  '90', '#8700af':  '91',
-    \ '#8700d7':  '92', '#8700ff':  '93', '#875f00':  '94', '#875f5f':  '95',
+    \ '#8700d7':  '92', '#8700ff':  '93', '#875f00':  '94', '#b57979':  '95',
     \ '#875f87':  '96', '#875faf':  '97', '#875fd7':  '98', '#875fff':  '99',
     \ '#878700': '100', '#87875f': '101', '#878787': '102', '#8787af': '103',
     \ '#8787d7': '104', '#8787ff': '105', '#87af00': '106', '#87af5f': '107',
@@ -194,8 +194,8 @@ let s:color_map = {
     \ '#ffd7d7': '224', '#ffd7ff': '225', '#ffff00': '226', '#ffff5f': '227',
     \ '#ffff87': '228', '#ffffaf': '229', '#ffffd7': '230', '#ffffff': '231',
     \ '#080808': '232', '#121212': '233', '#1c1c1c': '234', '#262626': '235',
-    \ '#303030': '236', '#3a3a3a': '237', '#444444': '238', '#4e4e4e': '239',
-    \ '#585858': '240', '#626262': '241', '#6c6c6c': '242', '#767676': '243',
+    \ '#282828': '236', '#3a3a3a': '237', '#444444': '238', '#4e4e4e': '239',
+    \ '#585858': '240', '#727272': '241', '#6c6c6c': '242', '#767676': '243',
     \ '#808080': '244', '#8a8a8a': '245', '#949494': '246', '#9e9e9e': '247',
     \ '#a8a8a8': '248', '#b2b2b2': '249', '#bcbcbc': '250', '#c6c6c6': '251',
     \ '#d0d0d0': '252', '#dadada': '253', '#e4e4e4': '254', '#eeeeee': '255',
@@ -270,7 +270,7 @@ if s:style == "light"
     if s:contrast == "high"
         hi Normal       guifg=#000000
     elseif s:contrast == "low"
-        hi Normal       guifg=#626262
+        hi Normal       guifg=#727272
     else
         hi Normal       guifg=#444444
     endif
@@ -294,7 +294,7 @@ else
     if s:contrast_bg == "high"
         hi Normal                       guibg=#121212
     else
-        hi Normal                       guibg=#303030
+        hi Normal                       guibg=#282828
     endif
 endif
 
@@ -348,7 +348,7 @@ if s:style == "light"
     endif
 else
     hi NonText      guifg=#5f5f87
-    hi SpecialKey   guifg=#5f875f
+    hi SpecialKey   guifg=#81a381
     if s:contrast == "low"
         hi Comment      guifg=#6c6c6c
         hi Constant     guifg=#afaf87
@@ -370,8 +370,8 @@ else
         hi Title        guifg=#87d7ff
         hi Type         guifg=#afffff
     else
-        hi Comment      guifg=#808080
-        hi Constant     guifg=#d7d7af
+        hi Comment      guifg=#949494
+        hi Constant     guifg=#d75f00
         hi Directory    guifg=#afd7af
         hi Identifier   guifg=#afd787
         hi PreProc      guifg=#87d7af
@@ -416,7 +416,7 @@ else
     hi CursorLine                   guibg=#444444
     hi IncSearch    guifg=bg
     hi MatchParen   guifg=bg
-    hi Search       guifg=bg
+    hi Search       guifg=#d7d7d7   guibg=#444444 
     hi Visual                       guibg=#005f87
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
@@ -507,7 +507,7 @@ if s:style == "light"
         hi FoldColumn   guifg=#808080
         hi Folded       guifg=#808080
         hi Pmenu                        guibg=#9e9e9e
-        hi PmenuSbar    guifg=#9e9e9e   guibg=#626262
+        hi PmenuSbar    guifg=#9e9e9e   guibg=#727272
         hi PmenuThumb                   guibg=#9e9e9e
         hi SignColumn   guifg=#808080
         hi StatusLine                   guibg=#9e9e9e
@@ -517,12 +517,12 @@ if s:style == "light"
         hi TabLineSel                   guibg=#afd7ff
         hi VertSplit                    guibg=#9e9e9e
     else
-        hi FoldColumn   guifg=#626262
-        hi Folded       guifg=#626262
+        hi FoldColumn   guifg=#727272
+        hi Folded       guifg=#727272
         hi Pmenu                        guibg=#808080
         hi PmenuSbar    guifg=#808080   guibg=#444444
         hi PmenuThumb                   guibg=#9e9e9e
-        hi SignColumn   guifg=#626262
+        hi SignColumn   guifg=#727272
         hi StatusLine                   guibg=#808080
         hi StatusLineNC                 guibg=#808080
         hi TabLine                      guibg=#808080
@@ -532,15 +532,15 @@ if s:style == "light"
     endif
 else
     hi ColorColumn                  guibg=#87875f
-    hi CursorLineNr guifg=#626262   guibg=#444444
+    hi CursorLineNr guifg=#727272   guibg=#444444
     hi FoldColumn                   guibg=#4e4e4e
     hi Folded                       guibg=#4e4e4e
-    hi LineNr       guifg=#626262   guibg=#444444
+    hi LineNr       guifg=#727272   guibg=#282828
     hi PmenuSel                     guibg=#005f87
     hi SignColumn                   guibg=#4e4e4e
     hi StatusLineNC guifg=#444444
     hi TabLineFill  guifg=#444444
-    hi VertSplit    guifg=#626262
+    hi VertSplit    guifg=#727272
     hi WildMenu                     guibg=#005f87
     if s:contrast == "low"
         hi FoldColumn   guifg=#a8a8a8
@@ -604,9 +604,9 @@ if s:style == "light"
         hi DiffText     guifg=#d75f00
     endif
 else
-    hi DiffAdd                      guibg=#5f875f
+    hi DiffAdd                      guibg=#81a381
     hi DiffChange                   guibg=#87875f
-    hi DiffDelete                   guibg=#875f5f
+    hi DiffDelete                   guibg=#b57979
     hi DiffText                     guibg=#87875f
     if s:contrast == "low"
         hi DiffText     guifg=#d7d75f
