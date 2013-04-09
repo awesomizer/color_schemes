@@ -134,7 +134,7 @@ let s:color_map = {
     \ 'bg': 'bg', 'fg': 'fg', 'NONE': 'NONE',
     \ '#000000':  '16', '#00005f':  '17', '#000087':  '18', '#0000af':  '19',
     \ '#0000d7':  '20', '#0000ff':  '21', '#005f00':  '22', '#005f5f':  '23',
-    \ '#005f87':  '24', '#005faf':  '25', '#005fd7':  '26', '#005fff':  '27',
+    \ '#2d4453':  '24', '#005faf':  '25', '#005fd7':  '26', '#005fff':  '27',
     \ '#008700':  '28', '#00875f':  '29', '#008787':  '30', '#0087af':  '31',
     \ '#0087d7':  '32', '#0087ff':  '33', '#00af00':  '34', '#00af5f':  '35',
     \ '#00af87':  '36', '#85c2ff':  '37', '#00afd7':  '38', '#00afff':  '39',
@@ -337,7 +337,7 @@ if s:style == "light"
         hi Special      guifg=#870087
         hi Statement    guifg=#005faf
         hi Title        guifg=#005faf
-        hi Type         guifg=#005f87
+        hi Type         guifg=#2d4453
     endif
 else
     hi NonText      guifg=#5f5f87
@@ -410,7 +410,7 @@ else
     hi IncSearch    guifg=bg
     hi MatchParen   guifg=bg
     hi Search       guifg=#eee391   guibg=#444444 
-    hi Visual                       guibg=#005f87
+    hi Visual                       guibg=#2d4453
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
         hi CursorIM                     guibg=#5f87af
@@ -432,7 +432,7 @@ else
         hi CursorIM                     guibg=#87afd7
         hi Error        guifg=#ff8787   guibg=#4d0000
         hi IncSearch                    guibg=#5fd7d7
-        hi MatchParen                   guibg=#afd75f
+        hi MatchParen                   guibg=#005faf
         hi Search                       guibg=#d78700
         hi Todo         guifg=#d7d75f   guibg=#5f5f00
     endif
@@ -529,12 +529,12 @@ else
     hi FoldColumn                   guibg=#4e4e4e
     hi Folded                       guibg=#4e4e4e
     hi LineNr       guifg=#727272   guibg=#282828
-    hi PmenuSel                     guibg=#005f87
+    hi PmenuSel                     guibg=#2d4453
     hi SignColumn                   guibg=#4e4e4e
     hi StatusLineNC guifg=#444444
     hi TabLineFill  guifg=#444444
     hi VertSplit    guifg=#727272
-    hi WildMenu                     guibg=#005f87
+    hi WildMenu                     guibg=#2d4453
     if s:contrast == "low"
         hi FoldColumn   guifg=#a8a8a8
         hi Folded       guifg=#a8a8a8
@@ -546,7 +546,7 @@ else
         hi StatusLineNC                 guibg=#8a8a8a
         hi TabLine                      guibg=#8a8a8a
         hi TabLineFill                  guibg=#8a8a8a
-        hi TabLineSel                   guibg=#005f87
+        hi TabLineSel                   guibg=#2d4453
         hi VertSplit                    guibg=#8a8a8a
     elseif s:contrast == "high"
         hi FoldColumn   guifg=#c6c6c6
@@ -572,7 +572,7 @@ else
         hi StatusLineNC                 guibg=#b2b2b2
         hi TabLine                      guibg=#b2b2b2
         hi TabLineFill                  guibg=#b2b2b2
-        hi TabLineSel                   guibg=#005f87
+        hi TabLineSel                   guibg=#2d4453
         hi VertSplit                    guibg=#b2b2b2
     endif
 endif
