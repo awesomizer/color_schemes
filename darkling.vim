@@ -134,7 +134,7 @@ let s:color_map = {
     \ 'bg': 'bg', 'fg': 'fg', 'NONE': 'NONE',
     \ '#000000':  '16', '#00005f':  '17', '#000087':  '18', '#0000af':  '19',
     \ '#0000d7':  '20', '#0000ff':  '21', '#005f00':  '22', '#005f5f':  '23',
-    \ '#2d4453':  '24', '#005faf':  '25', '#005fd7':  '26', '#005fff':  '27',
+    \ '#354e5f':  '24', '#005faf':  '25', '#005fd7':  '26', '#005fff':  '27',
     \ '#008700':  '28', '#00875f':  '29', '#008787':  '30', '#0087af':  '31',
     \ '#0087d7':  '32', '#0087ff':  '33', '#00af00':  '34', '#00af5f':  '35',
     \ '#00af87':  '36', '#85c2ff':  '37', '#00afd7':  '38', '#00afff':  '39',
@@ -337,7 +337,7 @@ if s:style == "light"
         hi Special      guifg=#870087
         hi Statement    guifg=#005faf
         hi Title        guifg=#005faf
-        hi Type         guifg=#2d4453
+        hi Type         guifg=#354e5f
     endif
 else
     hi NonText      guifg=#5f5f87
@@ -372,6 +372,9 @@ else
         hi Statement    guifg=#00d1d1
         hi Title        guifg=#3c91cd
         hi Type         guifg=#85c2ff
+		hi NERDtreeDirSlash	guifg=#eee391
+		hi NERDTreeBookmarkName guifg=#d58a39
+		hi rubyFunction guifg=#ffaf00
     endif
 endif
 
@@ -410,7 +413,7 @@ else
     hi IncSearch    guifg=bg
     hi MatchParen   guifg=bg
     hi Search       guifg=#eee391   guibg=#444444 
-    hi Visual                       guibg=#2d4453
+    hi Visual                       guibg=#354e5f
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
         hi CursorIM                     guibg=#5f87af
@@ -529,12 +532,12 @@ else
     hi FoldColumn                   guibg=#4e4e4e
     hi Folded                       guibg=#4e4e4e
     hi LineNr       guifg=#727272   guibg=#282828
-    hi PmenuSel                     guibg=#2d4453
+    hi PmenuSel                     guibg=#354e5f
     hi SignColumn                   guibg=#4e4e4e
     hi StatusLineNC guifg=#444444
     hi TabLineFill  guifg=#444444
     hi VertSplit    guifg=#727272
-    hi WildMenu                     guibg=#2d4453
+    hi WildMenu                     guibg=#354e5f
     if s:contrast == "low"
         hi FoldColumn   guifg=#a8a8a8
         hi Folded       guifg=#a8a8a8
@@ -546,7 +549,7 @@ else
         hi StatusLineNC                 guibg=#8a8a8a
         hi TabLine                      guibg=#8a8a8a
         hi TabLineFill                  guibg=#8a8a8a
-        hi TabLineSel                   guibg=#2d4453
+        hi TabLineSel                   guibg=#354e5f
         hi VertSplit                    guibg=#8a8a8a
     elseif s:contrast == "high"
         hi FoldColumn   guifg=#c6c6c6
@@ -572,7 +575,7 @@ else
         hi StatusLineNC                 guibg=#b2b2b2
         hi TabLine                      guibg=#b2b2b2
         hi TabLineFill                  guibg=#b2b2b2
-        hi TabLineSel                   guibg=#2d4453
+        hi TabLineSel                   guibg=#354e5f
         hi VertSplit                    guibg=#b2b2b2
     endif
 endif
