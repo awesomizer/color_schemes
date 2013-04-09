@@ -144,14 +144,14 @@ let s:color_map = {
     \ '#5f0000':  '52', '#5f005f':  '53', '#5f0087':  '54', '#5f00af':  '55',
     \ '#5f00d7':  '56', '#5f00ff':  '57', '#5f5f00':  '58', '#5f5f5f':  '59',
     \ '#5f5f87':  '60', '#5f5faf':  '61', '#5f5fd7':  '62', '#5f5fff':  '63',
-    \ '#5f8700':  '64', '#81a381':  '65', '#5f8787':  '66', '#5f87af':  '67',
+    \ '#5f8700':  '64', '#6fb36f':  '65', '#5f8787':  '66', '#5f87af':  '67',
     \ '#5f87d7':  '68', '#5f87ff':  '69', '#5faf00':  '70', '#5faf5f':  '71',
     \ '#5faf87':  '72', '#5fafaf':  '73', '#3c91cd':  '74', '#5fafff':  '75',
     \ '#5fd700':  '76', '#5fd75f':  '77', '#5fd787':  '78', '#5fd7af':  '79',
     \ '#5fd7d7':  '80', '#5fd7ff':  '81', '#5fff00':  '82', '#5fff5f':  '83',
     \ '#5fff87':  '84', '#5fffaf':  '85', '#5fffd7':  '86', '#5fffff':  '87',
-    \ '#870000':  '88', '#87005f':  '89', '#870087':  '90', '#8700af':  '91',
-    \ '#8700d7':  '92', '#8700ff':  '93', '#875f00':  '94', '#b78371':  '95',
+    \ '#4d0000':  '88', '#87005f':  '89', '#870087':  '90', '#8700af':  '91',
+    \ '#8700d7':  '92', '#8700ff':  '93', '#875f00':  '94', '#c66a62':  '95',
     \ '#875f87':  '96', '#875faf':  '97', '#875fd7':  '98', '#875fff':  '99',
     \ '#878700': '100', '#87875f': '101', '#878787': '102', '#8787af': '103',
     \ '#8787d7': '104', '#8787ff': '105', '#87af00': '106', '#87af5f': '107',
@@ -341,7 +341,7 @@ if s:style == "light"
     endif
 else
     hi NonText      guifg=#5f5f87
-    hi SpecialKey   guifg=#81a381
+    hi SpecialKey   guifg=#6fb36f
     if s:contrast == "low"
         hi Comment      guifg=#6c6c6c
         hi Constant     guifg=#afaf87
@@ -414,7 +414,7 @@ else
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
         hi CursorIM                     guibg=#5f87af
-        hi Error        guifg=#d75f5f   guibg=#870000
+        hi Error        guifg=#d75f5f   guibg=#4d0000
         hi IncSearch                    guibg=#85c2ff
         hi MatchParen                   guibg=#87af5f
         hi Search                       guibg=#d78700
@@ -430,7 +430,7 @@ else
     else
         hi Cursor                       guibg=#87afd7
         hi CursorIM                     guibg=#87afd7
-        hi Error        guifg=#ff8787   guibg=#870000
+        hi Error        guifg=#ff8787   guibg=#4d0000
         hi IncSearch                    guibg=#5fd7d7
         hi MatchParen                   guibg=#afd75f
         hi Search                       guibg=#d78700
@@ -597,9 +597,9 @@ if s:style == "light"
         hi DiffText     guifg=#c76f5d
     endif
 else
-    hi DiffAdd                      guibg=#81a381
+    hi DiffAdd                      guibg=#6fb36f
     hi DiffChange                   guibg=#87875f
-    hi DiffDelete                   guibg=#b78371
+    hi DiffDelete                   guibg=#c66a62
     hi DiffText                     guibg=#87875f
     if s:contrast == "low"
         hi DiffText     guifg=#d7d75f
