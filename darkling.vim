@@ -1,5 +1,5 @@
 " ============================================================================
-" Name:     Lucius vim color scheme
+" Name:     Darkling vim color scheme
 " Author:   Jonathan Filip <jfilip1024@gmail.com>
 " Version:  8.1.2
 " ----------------------------------------------------------------------------
@@ -15,18 +15,11 @@
 " You can set up the color scheme by manually setting the options you want or
 " by choosing one of the presets defined. These presets are loaded after you
 " first source the color scheme file and are all commands that start with
-" 'Lucius'.
+" 'Darkling'.
 "
-" I have also started to create color schemes for different applications. I
-" have been using them for PuTTY, iTerm2, and Visual Studio, but will keep
-" adding more as I go along. You can find the files for these on Github:
+" The upstream file for this color scheme can be found at:
 "
-" https://github.com/jonathanfilip/lucius
-"
-" You can also clone the following repository if you use Pathogen or something
-" similar. It holds the vim color scheme in a 'colors' directory:
-"
-" https://github.com/jonathanfilip/vim-lucius
+" https://github.com/awesomizer/color_schemes
 "
 "
 "
@@ -35,26 +28,26 @@
 " There are several presets available that will set all the options for you.
 " There are screenshots of each preset below:
 "
-" * LuciusDark (dark default): http://i.imgur.com/LsZbF.png
-" * LuciusDarkHighContrast: http://i.imgur.com/e70i9.png
-" * LuciusDarkLowContrast: http://i.imgur.com/Hmw8s.png
-" * LuciusBlack: http://i.imgur.com/iD4ri.png
-" * LuciusBlackHighContrast: http://i.imgur.com/lHvTJ.png
-" * LuciusBlackLowContrast: http://i.imgur.com/oZLkg.png
+" * DarklingDark (dark default): http://i.imgur.com/LsZbF.png
+" * DarklingDarkHighContrast: http://i.imgur.com/e70i9.png
+" * DarklingDarkLowContrast: http://i.imgur.com/Hmw8s.png
+" * DarklingBlack: http://i.imgur.com/iD4ri.png
+" * DarklingBlackHighContrast: http://i.imgur.com/lHvTJ.png
+" * DarklingBlackLowContrast: http://i.imgur.com/oZLkg.png
 "
-" * LuciusLight (light default): http://i.imgur.com/soYD8.png
-" * LuciusLightLowContrast: http://i.imgur.com/95I86.png
-" * LuciusWhite: http://i.imgur.com/wDzkz.png
-" * LuciusWhiteLowContrast: http://i.imgur.com/jlUf4.png
+" * DarklingLight (light default): http://i.imgur.com/soYD8.png
+" * DarklingLightLowContrast: http://i.imgur.com/95I86.png
+" * DarklingWhite: http://i.imgur.com/wDzkz.png
+" * DarklingWhiteLowContrast: http://i.imgur.com/jlUf4.png
 "
 " To use the presets, you just need to set the color scheme first. In your
 " vimrc, you can just do this:
 "
-" colorscheme lucius
-" LuciusBlack
+" colorscheme darkling
+" DarklingBlack
 "
 " You can still just set the background variable and then set the color
-" scheme. This will default to LuciusDark for 'dark' and LuciusLight for
+" scheme. This will default to DarklingDark for 'dark' and DarklingLight for
 " 'light'.
 "
 "
@@ -63,27 +56,27 @@
 " The presets available cover most of the options. You can, however, customize
 " things by setting the following variables yourself:
 "
-" g:lucius_style  (default: 'dark')
+" g:darkling_style  (default: 'dark')
 "
 " Set this option to either 'light' or 'dark' for your desired color scheme.
 " It has the same effect as setting the background.
 "
-" g:lucius_contrast  (default: 'normal')
+" g:darkling_contrast  (default: 'normal')
 "
 " This option determines the contrast to use for text/ui elements. It can be
 " set to 'low', 'normal', or 'high'. At this time there is no 'high' for the
 " light scheme.
 "
-" g:lucius_contrast_bg  (default: 'normal')
+" g:darkling_contrast_bg  (default: 'normal')
 "
 " Setting this option makes the background a higher contrast. Current settings
 " are 'normal' and 'high'.
 "
-" g:lucius_use_bold (default: 1)
+" g:darkling_use_bold (default: 1)
 "
 " Setting this will cause the color scheme to use bold fonts for some items.
 "
-" g:lucius_use_underline (default: 1)
+" g:darkling_use_underline (default: 1)
 "
 " Setting this will cause the color scheme to use underlined fonts for some
 " items.
@@ -102,32 +95,32 @@ if exists("syntax_on")
     syntax reset
 endif
 
-if exists("g:lucius_style")
-    let s:style = g:lucius_style
+if exists("g:darkling_style")
+    let s:style = g:darkling_style
 else
     let s:style = &background
 endif
 
-if exists("g:lucius_contrast")
-    let s:contrast = g:lucius_contrast
+if exists("g:darkling_contrast")
+    let s:contrast = g:darkling_contrast
 else
     let s:contrast = "normal"
 endif
 
-if exists("g:lucius_contrast_bg")
-    let s:contrast_bg = g:lucius_contrast_bg
+if exists("g:darkling_contrast_bg")
+    let s:contrast_bg = g:darkling_contrast_bg
 else
     let s:contrast_bg = "normal"
 endif
 
-if exists("g:lucius_use_bold")
-    let s:use_bold = g:lucius_use_bold
+if exists("g:darkling_use_bold")
+    let s:use_bold = g:darkling_use_bold
 else
     let s:use_bold = 1
 endif
 
-if exists("g:lucius_use_underline")
-    let s:use_underline = g:lucius_use_underline
+if exists("g:darkling_use_underline")
+    let s:use_underline = g:darkling_use_underline
 else
     let s:use_underline = 1
 endif
@@ -178,7 +171,7 @@ let s:color_map = {
     \ '#d70000': '160', '#d7005f': '161', '#d70087': '162', '#d700af': '163',
     \ '#d700d7': '164', '#d700ff': '165', '#c76f5d': '166', '#d75f5f': '167',
     \ '#d75f87': '168', '#d75faf': '169', '#d75fd7': '170', '#d75fff': '171',
-    \ '#d78700': '172', '#cf9659': '173', '#d78787': '174', '#d787af': '175',
+    \ '#d78700': '172', '#d58a39': '173', '#d78787': '174', '#d787af': '175',
     \ '#d787d7': '176', '#d787ff': '177', '#d7af00': '178', '#d7af5f': '179',
     \ '#d7af87': '180', '#d7afaf': '181', '#d7afd7': '182', '#d7afff': '183',
     \ '#d7d700': '184', '#d7d75f': '185', '#d7d787': '186', '#d7d7af': '187',
@@ -313,7 +306,7 @@ for s:item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_it
                 \ . " ctermfg=NONE ctermbg=NONE cterm=none term=none"
 endfor
 
-let g:colors_name="lucius"
+let g:colors_name="darkling"
 
 
 " ----------------------------------------------------------------------------
@@ -371,7 +364,7 @@ else
         hi Type         guifg=#afffff
     else
         hi Comment      guifg=#949494
-        hi Constant     guifg=#cf9659
+        hi Constant     guifg=#d58a39
         hi Directory    guifg=#e07189
         hi Identifier   guifg=#48a93d
         hi PreProc      guifg=#97f2ab
@@ -474,7 +467,7 @@ else
     else
         hi ErrorMsg     guifg=#ff5f5f
         hi MoreMsg      guifg=#5fd7d7
-        hi WarningMsg   guifg=#cf9659
+        hi WarningMsg   guifg=#d58a39
     endif
 endif
 
@@ -717,39 +710,39 @@ hi link VimwikiHeader6 BType
 " Preset Commands:
 " ============================================================================
 
-function! SetLucius(style, contrast, contrast_bg)
-    let g:lucius_style = a:style
-    let g:lucius_contrast = a:contrast
-    let g:lucius_contrast_bg = a:contrast_bg
+function! SetDarkling(style, contrast, contrast_bg)
+    let g:darkling_style = a:style
+    let g:darkling_contrast = a:contrast
+    let g:darkling_contrast_bg = a:contrast_bg
 endfunction
 
-command! LuciusLight call SetLucius("light", "normal", "normal")
-            \ | colorscheme lucius
-command! LuciusLightLowContrast call SetLucius("light", "low", "normal")
-            \ | colorscheme lucius
-command! LuciusLightHighContrast call SetLucius("light", "high", "normal")
-            \ | colorscheme lucius
+command! DarklingLight call SetDarkling("light", "normal", "normal")
+            \ | colorscheme darkling
+command! DarklingLightLowContrast call SetDarkling("light", "low", "normal")
+            \ | colorscheme darkling
+command! DarklingLightHighContrast call SetDarkling("light", "high", "normal")
+            \ | colorscheme darkling
 
-command! LuciusWhite call SetLucius("light", "normal", "high")
-            \ | colorscheme lucius
-command! LuciusWhiteLowContrast call SetLucius("light", "low", "high")
-            \ | colorscheme lucius
-command! LuciusWhiteHighContrast call SetLucius("light", "high", "high")
-            \ | colorscheme lucius
+command! DarklingWhite call SetDarkling("light", "normal", "high")
+            \ | colorscheme darkling
+command! DarklingWhiteLowContrast call SetDarkling("light", "low", "high")
+            \ | colorscheme darkling
+command! DarklingWhiteHighContrast call SetDarkling("light", "high", "high")
+            \ | colorscheme darkling
 
-command! LuciusDark call SetLucius("dark", "normal", "normal")
-            \ | colorscheme lucius
-command! LuciusDarkLowContrast call SetLucius("dark", "low", "normal")
-            \ | colorscheme lucius
-command! LuciusDarkHighContrast call SetLucius("dark", "high", "normal")
-            \ | colorscheme lucius
+command! DarklingDark call SetDarkling("dark", "normal", "normal")
+            \ | colorscheme darkling
+command! DarklingDarkLowContrast call SetDarkling("dark", "low", "normal")
+            \ | colorscheme darkling
+command! DarklingDarkHighContrast call SetDarkling("dark", "high", "normal")
+            \ | colorscheme darkling
 
-command! LuciusBlack call SetLucius("dark", "normal", "high")
-            \ | colorscheme lucius
-command! LuciusBlackLowContrast call SetLucius("dark", "low", "high")
-            \ | colorscheme lucius
-command! LuciusBlackHighContrast call SetLucius("dark", "high", "high")
-            \ | colorscheme lucius
+command! DarklingBlack call SetDarkling("dark", "normal", "high")
+            \ | colorscheme darkling
+command! DarklingBlackLowContrast call SetDarkling("dark", "low", "high")
+            \ | colorscheme darkling
+command! DarklingBlackHighContrast call SetDarkling("dark", "high", "high")
+            \ | colorscheme darkling
 
 " vim: tw=78
 
