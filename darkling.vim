@@ -165,7 +165,7 @@ let s:color_map = {
     \ '#af8700': '136', '#af875f': '137', '#af8787': '138', '#af87af': '139',
     \ '#af87d7': '140', '#af87ff': '141', '#afaf00': '142', '#afaf5f': '143',
     \ '#afaf87': '144', '#afafaf': '145', '#afafd7': '146', '#afafff': '147',
-    \ '#afd700': '148', '#afd75f': '149', '#48a93d': '150', '#97d897': '151',
+    \ '#afd700': '148', '#afd75f': '149', '#3aae2d': '150', '#97d897': '151',
     \ '#afd7d7': '152', '#afd7ff': '153', '#afff00': '154', '#afff5f': '155',
     \ '#afff87': '156', '#afffaf': '157', '#afffd7': '158', '#afffff': '159',
     \ '#d70000': '160', '#d7005f': '161', '#d70087': '162', '#d700af': '163',
@@ -366,7 +366,7 @@ else
         hi Comment      guifg=#949494
         hi Constant     guifg=#d58a39
         hi Directory    guifg=#e07189
-        hi Identifier   guifg=#48a93d
+        hi Identifier   guifg=#3aae2d
         hi PreProc      guifg=#97f2ab
         hi Special      guifg=#e8cf5f
         hi Statement    guifg=#00d1d1
