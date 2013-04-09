@@ -372,7 +372,7 @@ else
         hi Statement    guifg=#00d1d1
         hi Title        guifg=#3c91cd
         hi Type         guifg=#85c2ff
-		hi NERDtreeDirSlash	guifg=#eee391
+		hi NERDtreeDirSlash	guifg=#d58a39
 		hi NERDTreeBookmarkName guifg=#d58a39
 		hi rubyFunction guifg=#ffaf00
     endif
