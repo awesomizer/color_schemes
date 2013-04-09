@@ -175,7 +175,7 @@ let s:color_map = {
     \ '#d787d7': '176', '#d787ff': '177', '#d7af00': '178', '#d7af5f': '179',
     \ '#d7af87': '180', '#d7afaf': '181', '#d7afd7': '182', '#d7afff': '183',
     \ '#d7d700': '184', '#d7d75f': '185', '#d7d787': '186', '#d7d7af': '187',
-    \ '#eee391': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
+    \ '#eadc76': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
     \ '#d7ff87': '192', '#d7ffaf': '193', '#d7ffd7': '194', '#d7ffff': '195',
     \ '#ff0000': '196', '#ff005f': '197', '#ff0087': '198', '#ff00af': '199',
     \ '#ff00d7': '200', '#ff00ff': '201', '#ff5f00': '202', '#ff5f5f': '203',
@@ -273,7 +273,7 @@ else
     elseif s:contrast == "low"
         hi Normal       guifg=#bcbcbc
     else
-        hi Normal       guifg=#eee391
+        hi Normal       guifg=#eadc76
     endif
 endif
 
@@ -412,7 +412,7 @@ else
     hi CursorLine                   guibg=#444444
     hi IncSearch    guifg=bg
     hi MatchParen   guifg=bg
-    hi Search       guifg=#eee391   guibg=#444444 
+    hi Search       guifg=#eadc76   guibg=#444444 
     hi Visual                       guibg=#354e5f
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
