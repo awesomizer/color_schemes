@@ -1,7 +1,7 @@
 " ============================================================================
 " Name:     Darkling vim color scheme
-" Author:   Jonathan Filip <jfilip1024@gmail.com>
-" Version:  8.1.2
+" Author:   Christian Smith-Socaris, after Jonathan Filip
+" Version:  0.1
 " ----------------------------------------------------------------------------
 "
 " Light and dark color scheme for GUI and 256 color terminal.
