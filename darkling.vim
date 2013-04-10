@@ -372,9 +372,12 @@ else
         hi Statement    guifg=#00d1d1
         hi Title        guifg=#3c91cd
         hi Type         guifg=#8abaea
-		hi NERDtreeDirSlash	guifg=#e07189
+		hi NERDtreeDirSlash		guifg=#e07189
 		hi NERDTreeBookmarkName guifg=#d58a39
-		hi rubyFunction guifg=#ffaf00
+		hi rubyFunction 		guifg=#ffaf00
+		hi rubyInterpolation 	guifg=#e07189
+		hi rubyLocalVariableOrMethod	guifg=#e07189
+		hi rubyBlockParameter	guifg=#e07189
     endif
 endif
 
