@@ -137,7 +137,7 @@ let s:color_map = {
     \ '#354e5f':  '24', '#005faf':  '25', '#005fd7':  '26', '#005fff':  '27',
     \ '#008700':  '28', '#00875f':  '29', '#008787':  '30', '#0087af':  '31',
     \ '#0087d7':  '32', '#0087ff':  '33', '#00af00':  '34', '#00af5f':  '35',
-    \ '#00af87':  '36', '#85c2ff':  '37', '#00afd7':  '38', '#00afff':  '39',
+    \ '#00af87':  '36', '#8abaea':  '37', '#00afd7':  '38', '#00afff':  '39',
     \ '#00d700':  '40', '#00d75f':  '41', '#00d787':  '42', '#00d7af':  '43',
     \ '#00d7d7':  '44', '#00d7ff':  '45', '#00ff00':  '46', '#00ff5f':  '47',
     \ '#00ff87':  '48', '#00ffaf':  '49', '#00ffd7':  '50', '#00ffff':  '51',
@@ -175,7 +175,7 @@ let s:color_map = {
     \ '#d787d7': '176', '#d787ff': '177', '#d7af00': '178', '#d7af5f': '179',
     \ '#d7af87': '180', '#d7afaf': '181', '#d7afd7': '182', '#d7afff': '183',
     \ '#d7d700': '184', '#d7d75f': '185', '#d7d787': '186', '#d7d7af': '187',
-    \ '#eadc76': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
+    \ '#e5d457': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
     \ '#d7ff87': '192', '#d7ffaf': '193', '#d7ffd7': '194', '#d7ffff': '195',
     \ '#ff0000': '196', '#ff005f': '197', '#ff0087': '198', '#ff00af': '199',
     \ '#ff00d7': '200', '#ff00ff': '201', '#ff5f00': '202', '#ff5f5f': '203',
@@ -273,7 +273,7 @@ else
     elseif s:contrast == "low"
         hi Normal       guifg=#bcbcbc
     else
-        hi Normal       guifg=#eadc76
+        hi Normal       guifg=#e5d457
     endif
 endif
 
@@ -323,7 +323,7 @@ if s:style == "light"
         hi Constant     guifg=#d78700
         hi Directory    guifg=#00af87
         hi Identifier   guifg=#00af00
-        hi PreProc      guifg=#85c2ff
+        hi PreProc      guifg=#8abaea
         hi Special      guifg=#af00af
         hi Statement    guifg=#0087d7
         hi Title        guifg=#0087d7
@@ -371,7 +371,7 @@ else
         hi Special      guifg=#e8cf5f
         hi Statement    guifg=#00d1d1
         hi Title        guifg=#3c91cd
-        hi Type         guifg=#85c2ff
+        hi Type         guifg=#8abaea
 		hi NERDtreeDirSlash	guifg=#e07189
 		hi NERDTreeBookmarkName guifg=#d58a39
 		hi rubyFunction guifg=#ffaf00
@@ -412,13 +412,13 @@ else
     hi CursorLine                   guibg=#444444
     hi IncSearch    guifg=bg
     hi MatchParen   guifg=bg
-    hi Search       guifg=#eadc76   guibg=#444444 
+    hi Search       guifg=#e5d457   guibg=#444444 
     hi Visual                       guibg=#354e5f
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
         hi CursorIM                     guibg=#5f87af
         hi Error        guifg=#d75f5f   guibg=#4d0000
-        hi IncSearch                    guibg=#85c2ff
+        hi IncSearch                    guibg=#8abaea
         hi MatchParen                   guibg=#87af5f
         hi Search                       guibg=#d78700
         hi Todo         guifg=#afaf00   guibg=#5f5f00
@@ -461,7 +461,7 @@ if s:style == "light"
 else
     if s:contrast == "low"
         hi ErrorMsg     guifg=#d75f5f
-        hi MoreMsg      guifg=#85c2ff
+        hi MoreMsg      guifg=#8abaea
         hi WarningMsg   guifg=#af875f
     elseif s:contrast == "high"
         hi ErrorMsg     guifg=#ff8787
