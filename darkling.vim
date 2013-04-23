@@ -140,7 +140,7 @@ let s:color_map = {
     \ '#00af87':  '36', '#8abaea':  '37', '#00afd7':  '38', '#00afff':  '39',
     \ '#00d700':  '40', '#00d75f':  '41', '#00d787':  '42', '#00d7af':  '43',
     \ '#00d7d7':  '44', '#00d7ff':  '45', '#00ff00':  '46', '#00ff5f':  '47',
-    \ '#00ff87':  '48', '#00ffaf':  '49', '#00ffd7':  '50', '#00ffff':  '51',
+    \ '#00ff87':  '48', '#47ffd1':  '49', '#00ffd7':  '50', '#00ffff':  '51',
     \ '#5f0000':  '52', '#5f005f':  '53', '#5f0087':  '54', '#5f00af':  '55',
     \ '#5f00d7':  '56', '#5f00ff':  '57', '#5f5f00':  '58', '#5f5f5f':  '59',
     \ '#5f5f87':  '60', '#5f5faf':  '61', '#5f5fd7':  '62', '#5f5fff':  '63',
@@ -165,7 +165,7 @@ let s:color_map = {
     \ '#af8700': '136', '#af875f': '137', '#af8787': '138', '#af87af': '139',
     \ '#af87d7': '140', '#af87ff': '141', '#afaf00': '142', '#afaf5f': '143',
     \ '#afaf87': '144', '#afafaf': '145', '#afafd7': '146', '#afafff': '147',
-    \ '#afd700': '148', '#afd75f': '149', '#3aae2d': '150', '#97d897': '151',
+    \ '#afd700': '148', '#afd75f': '149', '#28bd55': '150', '#97d897': '151',
     \ '#afd7d7': '152', '#afd7ff': '153', '#afff00': '154', '#afff5f': '155',
     \ '#afff87': '156', '#afffaf': '157', '#afffd7': '158', '#afffff': '159',
     \ '#d70000': '160', '#d7005f': '161', '#d70087': '162', '#d700af': '163',
@@ -175,7 +175,7 @@ let s:color_map = {
     \ '#d787d7': '176', '#d787ff': '177', '#d7af00': '178', '#d7af5f': '179',
     \ '#d7af87': '180', '#d7afaf': '181', '#d7afd7': '182', '#d7afff': '183',
     \ '#d7d700': '184', '#d7d75f': '185', '#d7d787': '186', '#d7d7af': '187',
-    \ '#e5d457': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
+    \ '#e1cf41': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
     \ '#d7ff87': '192', '#d7ffaf': '193', '#d7ffd7': '194', '#d7ffff': '195',
     \ '#ff0000': '196', '#ff005f': '197', '#ff0087': '198', '#ff00af': '199',
     \ '#ff00d7': '200', '#ff00ff': '201', '#ff5f00': '202', '#ff5f5f': '203',
@@ -273,7 +273,7 @@ else
     elseif s:contrast == "low"
         hi Normal       guifg=#bcbcbc
     else
-        hi Normal       guifg=#e5d457
+        hi Normal       guifg=#e1cf41
     endif
 endif
 
@@ -365,11 +365,17 @@ else
     else
         hi Comment      guifg=#949494
         hi Constant     guifg=#d58a39
+        hi rubyDelimEscape  guifg=#d58a39
+        hi rubySymbol   guifg=#d58a39
         hi Directory    guifg=#e07189
-        hi Identifier   guifg=#3aae2d
+        hi Identifier   guifg=#28bd55
+        hi rubyKeyword  guifg=#28bd55
+        hi rubyInstanceVariable guifg=#5fd700
         hi PreProc      guifg=#97f2ab
-        hi Special      guifg=#e8cf5f
+        hi Special      guifg=#e1cf41
+        hi rubyOperator guifg=#e1cf41
         hi Statement    guifg=#00d1d1
+        hi rubyConditional  guifg=#47ffd1
         hi Title        guifg=#3c91cd
         hi Type         guifg=#8abaea
 		hi NERDtreeDirSlash		guifg=#e07189
@@ -377,7 +383,7 @@ else
 		hi rubyFunction 		guifg=#ffaf00
 		hi rubyInterpolation 	guifg=#e07189
 		hi rubyLocalVariableOrMethod	guifg=#e07189
-		hi rubyBlockParameter	guifg=#e07189
+        hi rubyBlockParameter   guifg=#e07189
     endif
 endif
 
@@ -415,7 +421,7 @@ else
     hi CursorLine                   guibg=#444444
     hi IncSearch    guifg=bg
     hi MatchParen   guifg=bg
-    hi Search       guifg=#e5d457   guibg=#444444 
+    hi Search       guifg=#e1cf41   guibg=#444444 
     hi Visual                       guibg=#354e5f
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
